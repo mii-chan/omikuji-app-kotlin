@@ -1,0 +1,12 @@
+<resources>
+    <!--Application-->
+    <string name="app_name">おみくじ</string>
+
+    <!--MainActivity-->
+    <string name="start_omikuji_bg_desc">背景画像</string>
+    <string name="start_omikuji_button">おみくじを引く</string>
+
+    <!--ResultActivity-->
+    <string name="result_bg_desc">背景画像</string>
+    <string name="omikuji_desc">おみくじの結果</string>
+</resources>
