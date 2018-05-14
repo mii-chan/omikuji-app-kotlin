@@ -20,9 +20,7 @@ class ResultActivity : AppCompatActivity() {
         showResult()
 
         // デフォルトResultをセットする
-        val intent = Intent()
-        intent.putExtra(EXTRA_NAME_RES, selectedOmikuji.nameRes)
-        setResult(RESULT_OK, intent)
+        MainActivity.setResult(this, RESULT_OK, selectedOmikuji.nameRes)
     }
 
     private fun showResult() {

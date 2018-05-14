@@ -4,6 +4,7 @@ import android.app.Activity
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.support.annotation.StringRes
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -24,5 +25,12 @@ class MainActivity : AppCompatActivity() {
                         .format(getString(data.getIntExtra(ResultActivity.EXTRA_NAME_RES, -1)))
             }
         }
+    }
+
+    companion object {
+        fun setResult(activity: ResultActivity, resultCode: Int, @StringRes nameRes: Int) = activity.setResult(
+                resultCode,
+                Intent().apply { putExtra(ResultActivity.EXTRA_NAME_RES, nameRes) }
+        )
     }
 }
