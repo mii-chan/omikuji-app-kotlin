@@ -13,16 +13,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         // 「おみくじを引く」を押したら、ResultActivityを開始する
-        startOmikujiButton.setOnClickListener { startResultActivity() }
-    }
-
-
-    private fun startResultActivity() {
-        // Intentの作成
-        val intent = Intent(this, ResultActivity::class.java)
-
-        // Activityの開始
-        startActivityForResult(intent, ResultActivity.REQUEST_CODE)
+        startOmikujiButton.setOnClickListener { ResultActivity.startForResult(this) }
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {

@@ -41,5 +41,9 @@ class ResultActivity : AppCompatActivity() {
     companion object {
         const val REQUEST_CODE = 101
         const val EXTRA_NAME_RES = "EXTRA_NAME_RES"
+        fun startForResult(activity: MainActivity) = activity.startActivityForResult(
+                Intent(activity, ResultActivity::class.java),
+                REQUEST_CODE
+        )
     }
 }
