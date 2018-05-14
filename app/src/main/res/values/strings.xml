@@ -2,6 +2,14 @@
     <!--Application-->
     <string name="app_name">おみくじ</string>
 
+    <!--Omikuji-->
+    <string name="daikichi">大吉</string>
+    <string name="chukichi">中吉</string>
+    <string name="kichi">吉</string>
+    <string name="kyo">凶</string>
+    <string name="daikyo">大凶</string>
+
+
     <!--MainActivity-->
     <string name="start_omikuji_bg_desc">背景画像</string>
     <string name="start_omikuji_button">おみくじを引く</string>

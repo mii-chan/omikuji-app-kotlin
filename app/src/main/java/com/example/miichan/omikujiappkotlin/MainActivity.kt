@@ -1,5 +1,6 @@
 package com.example.miichan.omikujiappkotlin
 
+import android.app.Activity
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
@@ -21,6 +22,16 @@ class MainActivity : AppCompatActivity() {
         val intent = Intent(this, ResultActivity::class.java)
 
         // Activityの開始
-        startActivity(intent)
+        startActivityForResult(intent, ResultActivity.REQUEST_CODE)
+    }
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        if (requestCode == ResultActivity.REQUEST_CODE && resultCode == Activity.RESULT_OK) {
+
+            if (data != null && data.getIntExtra(ResultActivity.EXTRA_NAME_RES, -1) != -1) {
+                supportActionBar?.title = "前回は%sでした"
+                        .format(getString(data.getIntExtra(ResultActivity.EXTRA_NAME_RES, -1)))
+            }
+        }
     }
 }
