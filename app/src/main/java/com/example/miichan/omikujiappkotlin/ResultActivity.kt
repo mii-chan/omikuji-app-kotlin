@@ -30,11 +30,12 @@ class ResultActivity : AppCompatActivity() {
         val randomNumber = (Math.random() * Omikuji.values().size).toInt()
         selectedOmikuji = Omikuji.values()[randomNumber]
 
-        // 選ばれた値の画像をセットする
-        omikujiImageView.setImageResource(selectedOmikuji.omikujiRes)
-
-        // Fade Inのアニメーションを施す
-        omikujiImageView.startAnimation(AnimationUtils.loadAnimation(this, R.anim.fade_in))
+        omikujiImageView.apply {
+            // 選ばれた値の画像をセットする
+            setImageResource(selectedOmikuji.omikujiRes)
+            // Fade Inのアニメーションを施す
+            startAnimation(AnimationUtils.loadAnimation(this@ResultActivity, R.anim.fade_in))
+        }
     }
 
     companion object {
