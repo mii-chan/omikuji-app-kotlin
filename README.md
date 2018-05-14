@@ -2,6 +2,14 @@
 ## About
 2018/05/14 Kotlin勉強会（Androidアプリ開発編#2）
 
+<img src="https://github.com/mii-chan/omikuji-app-kotlin/blob/art/screenshot_main.png" width="200" height="auto"/> <img src="https://github.com/mii-chan/omikuji-app-kotlin/blob/art/screenshot_result.png" width="200" height="auto"/> <img src="https://github.com/mii-chan/omikuji-app-kotlin/blob/art/screenshot_on_activity_result.png" width="200" height="auto"/>
+
+## Getting Started
+以下のbranch順で進めてください
+
+starter → start-activity → start-activity-for-result → refactor → master(最終成果物)
+
+
 ## Requirements
 * Android Studio 3.1.1 or higher
 
